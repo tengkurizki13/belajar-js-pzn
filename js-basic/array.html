@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array & Object</title>
+</head>
+<body>
+    <script>
+
+        // array
+        const kosong = [];
+        kosong.push('satu');
+        kosong.push(2);
+        kosong.push("tiga");
+        kosong.push([2,5,6]);
+
+        kosong[1] = 'dua'
+        delete kosong[0];
+        console.table(kosong);
+        console.log(kosong.length);
+        console.log(kosong[3][1]);
+        console.log();
+
+        //  object
+
+        let abj = {};
+
+        abj['name'] = "rizki";
+        abj['asal'] = "riau";
+        abj['sekolah'] = "qodr";
+
+        let pisah = {
+            name : "rizki",
+            asal : "jobja",
+            no : 0845,
+        }
+
+
+        console.table(pisah);
+    </script>
+</body>
+</html>

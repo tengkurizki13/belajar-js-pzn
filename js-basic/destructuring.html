@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // destructuring di arrray
+        const names = ['tengku','rizki','dinelvi','pratama','aan'];
+        // const [firstName,middleName,lastName,...others]= names;
+
+        // console.log(firstName);
+        // console.log(middleName);
+        // console.log(lastName);
+        // console.log(others);
+
+        // destructuring di object = harus sama dengan propertinya
+        // const person = {
+        //     firstName:"muhammad",
+        //     middleName:'ridwan',
+        //     lastName:'kamil',
+        //     address:{
+        //         street:'jln. lintas timur',
+        //         city:'riau',
+        //         country:'indonesia'
+        //     },
+        //     hobby: 'football'
+        // }
+
+        // const {firstName,middleName,lastName,address:{street,city,country},...others}= person;
+
+        // console.log(firstName);
+        // // console.log(middleName);
+        // // console.log(lastName);
+        // // console.log(street);
+        // // console.log(city);
+        // // console.log(country);
+        // // console.log(others);
+
+        // // destructuring di fuction= array dan object
+
+        // function displaydes({firstName,middleName,lastName}){
+        //     console.log(`name ${firstName}`);
+        //     console.log(middleName);
+        //     console.log(lastName);
+        // }
+
+        // const person = {
+        //     firstName:"muhammad",
+        //     middleName:'ridwan',
+        //     lastName:'kamil'}
+
+
+        //     displaydes(person);
+
+        //     function cobaarray([pertama,kedua]){
+        //         return pertama+kedua;
+        //     }
+        //     console.log(cobaarray([10,10]));
+            
+
+            // cara mengganti nama variabel dalam object
+
+             const person = {
+            firstName:"muhammad",
+            middleName:'ridwan',
+          
+        }
+
+        const {firstName:namaDepan
+            ,middleName:namatengah
+            ,lastName:namaBelakang= 'rizki'}= person;
+
+        console.log(namaDepan);
+        console.log(namatengah);
+        console.log(namaBelakang);
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const target = {
+            middlName :"prtama"
+        };
+
+
+        const handler = {
+            get:function(target,property){
+                console.log(`acseee property : ${property}`);
+                return target[property];
+            },
+
+            set :function(target,property,value){
+                console.log(`rubah  property : ${property} :${value}`);
+
+             target[property] =value;
+            }
+        }
+
+        const proxy = new Proxy(target,handler);
+        proxy.firstName = "rizki";
+        proxy.lastName = "dinelvi";
+
+        console.log(proxy.firstName);
+        console.log(proxy.middlName);
+        console.log(proxy.lastName);
+
+        console.log(target);
+
+    </script>
+</body>
+</html>

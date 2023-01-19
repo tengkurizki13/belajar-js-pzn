@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <me ta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+// closure adalah mengakses data local scope ditempat yang bukan semestinya
+
+
+function createAdder(value){
+    const name = "rizki";
+
+    function add(param){
+        console.log(name);
+        return value + param;
+    }
+return add;
+}
+
+
+const addTwo = createAdder(5);
+// isinya
+// function add(param){
+//         console.log("rizki");
+//         return 5 + param;
+//     }
+
+console.log(addTwo(10));
+
+
+
+    </script>
+</body>
+</html>

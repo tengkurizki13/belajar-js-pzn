@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       
+
+        class Person{
+
+            constructor(name){
+                this.name = name;
+                this.asal = "riau";
+                this.sayHello = function(name){
+                console.log(`my name is ${name} my name is${this.asal}`);
+                }
+            }
+
+            saybye(name){
+                console.log(`my name is ${name} my name is${this.name}`);
+
+            }
+        }
+        
+
+        // Person.prototype.saybye = function(){
+        //     console.log("good bye");
+        // }
+
+        // Person.prototype.run = function(){
+        //     console.log(`${this.firstName} is running`);
+        // }
+
+
+        const rizki = new Person("rizki");
+    
+        // console.log(rizki.sayHello("tnekgu"));
+    </script>
+</body>
+</html>

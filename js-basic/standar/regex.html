@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // create regex
+        const regex1 = /rizki/;
+        const regex2 =new RegExp("rizki");
+        const regex3 =new RegExp(/rizki/);
+
+
+        // test regex
+
+        const name ="rizki Dinelvi rizki Dinelvi";
+        const regex = /dinelvi/;
+
+
+        const result = regex.exec(name);
+        const test = regex.test("tisa");
+
+        // console.log(result);
+
+
+        // regex modifier
+
+        const name2 = "rizki Dinelvi\nRizki dinelvi\nRizky dinelvi";
+        const regex4 = /rizki/ig;
+        const regex5 = /dinelvi/ig;
+
+        let result2;
+        while ((result2 = regex4.exec(name2)) !== null ) {
+            console.log(result2);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label for="username">username
+            <input type="text" id="username" name="username">
+        </label>
+        <label for="password">password:
+            <input type="password" id="password" name="password">
+        </label>
+
+        <input type="button" id="login" value="login">
+    </form>
+    <h1 id="response"></h1>
+    <script>
+        function doLogin(){
+            const request = new Request("https://hookb.in/lJ0e2pByQbiJ7ZEJWodY",{
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json",
+                "Accept" : "application/json"
+            },
+            body:JSON.stringify({
+                username: document.getElementById("username"),
+                password: document.getElementById("password")
+            })
+        })
+
+        const response = fetch(request);
+
+        response
+            .then((response) => response.json())
+            .then(function(json){
+                document.getElementById("response").textContent = json.success;
+            })
+            .catch(function(error){
+                document.getElementById("response").textContent = error;
+
+            })
+        }
+
+        document.getElementById('login').onclick = doLogin;
+
+    </script>
+</body>
+</html>

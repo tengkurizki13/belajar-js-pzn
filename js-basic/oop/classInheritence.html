@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       
+
+        class Employee{
+
+            saybye(name){
+                console.log(`hello${name} my name employee is${this.name}`);
+
+            }
+        }
+
+        class Manager extends Employee{
+
+            saybye(name){
+               console.log(`hello${name} my name manager is${this.name}`);
+
+}
+}
+        
+const rizki = new Employee();
+rizki.name = "tengku";
+rizki.saybye("dinelvi");
+
+const budi = new Manager();
+budi.name = "budi";
+budi.saybye("jenggot");
+
+console.log(rizki);
+console.log(budi);
+
+
+    </script>
+</body>
+</html>
